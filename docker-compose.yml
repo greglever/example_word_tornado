@@ -1,0 +1,16 @@
+db:
+  image: postgres:10.3
+  environment:
+    POSTGRES_USER: wordtornado
+    POSTGRES_PASSWORD: wordtornado
+    POSTGRES_DB: wordtornado
+  ports:
+    - "3306"
+web:
+  build: .
+  restart: always
+  links:
+    - db
+  ports:
+    - "8888:8888"
+  command: --db_host=db

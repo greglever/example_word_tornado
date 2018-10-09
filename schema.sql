@@ -1,0 +1,7 @@
+
+DROP TABLE IF EXISTS words;
+CREATE TABLE words (
+    id SERIAL PRIMARY KEY,
+    word VARCHAR(100) NOT NULL UNIQUE,
+    frequency VARCHAR(100) NOT NULL
+);

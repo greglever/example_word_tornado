@@ -1,0 +1,4 @@
+aiopg
+psycopg2
+tornado
+BeautifulSoup4
